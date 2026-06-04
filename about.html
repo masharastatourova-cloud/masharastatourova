@@ -7,26 +7,26 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--black:#0a0a09;--warm-white:#f5f4f0;--off-white:#eceae4;--mid:#5a5a56;--rule:#c8c7c2;--accent:#c8442a;--body-text:#2a2a27}html{font-size:16px;scroll-behavior:smooth}body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--warm-white);color:var(--black);font-weight:400;line-height:1.6;letter-spacing:.01em;-webkit-font-smoothing:antialiased}nav{width:100%;background:var(--warm-white);border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px}.nav-name{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);text-decoration:none}.nav-links{display:flex;gap:2.5rem;list-style:none}.nav-links a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s}.nav-links a:hover{color:var(--black)}.nav-links a.active{color:var(--black)}
 
-/* PAGE HEADER */
-.page-header{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule);min-height:40vh}.page-header-left{padding:5rem 3rem;border-right:1px solid var(--rule);display:flex;flex-direction:column;justify-content:flex-end}.page-header-right{padding:5rem 3rem;display:flex;flex-direction:column;justify-content:flex-end}.page-eyebrow{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:2rem;font-weight:500}.page-title{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(2.8rem,4vw,4rem);font-weight:400;line-height:1.08;letter-spacing:-.02em}.page-intro{font-size:1.15rem;line-height:1.85;color:var(--body-text);max-width:460px}
+/* INTRO — photo left, text right */
+.intro{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule);min-height:85vh}.intro-photo{position:relative;overflow:hidden;border-right:1px solid var(--rule)}.intro-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:grayscale(12%) contrast(1.02)}.intro-text{display:flex;flex-direction:column;justify-content:flex-end;padding:5rem 3rem}.intro-eyebrow{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:2rem;font-weight:500}.intro-title{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(2.6rem,4vw,3.8rem);font-weight:400;line-height:1.08;letter-spacing:-.02em;margin-bottom:2.5rem}.intro-title em{font-style:italic;color:var(--accent)}.intro-body{font-size:1.05rem;line-height:1.85;color:var(--body-text);max-width:420px}
 
-/* BIO SECTION */
+/* BIO */
 .bio-section{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule)}.bio-left{padding:5rem 3rem;border-right:1px solid var(--rule)}.bio-right{padding:5rem 3rem}.bio-label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:3rem;font-weight:500}.bio-body{font-size:1rem;line-height:1.85;color:var(--body-text);margin-bottom:1.5rem}.bio-body:last-child{margin-bottom:0}
 
 /* CAPABILITIES */
-.capabilities{border-bottom:1px solid var(--rule);padding:5rem 3rem}.cap-inner{display:grid;grid-template-columns:1fr 1fr;gap:0}.cap-label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:3rem;font-weight:500;grid-column:1/-1}.cap-list{list-style:none}.cap-item{padding:1.4rem 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:start}.cap-item:last-child{border-bottom:1px solid var(--rule)}.cap-num{font-size:10px;color:var(--mid);letter-spacing:.1em;font-weight:500;padding-top:2px}.cap-text{font-size:1rem;color:var(--black);font-weight:400;line-height:1.5}.cap-sub{font-size:.85rem;color:var(--mid);margin-top:.25rem;line-height:1.5}
+.capabilities{border-bottom:1px solid var(--rule);padding:5rem 3rem}.cap-label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:3rem;font-weight:500}.cap-list{list-style:none}.cap-item{padding:1.4rem 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:3rem 1fr;gap:.5rem;align-items:start}.cap-item:last-child{border-bottom:1px solid var(--rule)}.cap-num{font-size:10px;color:var(--mid);letter-spacing:.1em;font-weight:500;padding-top:3px}.cap-text{font-size:1rem;color:var(--black);font-weight:400;line-height:1.5}.cap-sub{font-size:.85rem;color:var(--mid);margin-top:.25rem;line-height:1.5}
 
-/* QUOTE BAND */
-.quote-band{padding:5rem 3rem;border-bottom:1px solid var(--rule);background:var(--off-white)}.quote-inner{max-width:780px}.quote-text{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:400;line-height:1.25;letter-spacing:-.01em;color:var(--black)}.quote-text em{font-style:italic;color:var(--accent)}
+/* QUOTE */
+.quote-band{padding:5rem 3rem;border-bottom:1px solid var(--rule);background:var(--off-white)}.quote-text{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:400;line-height:1.3;letter-spacing:-.01em;color:var(--black);max-width:820px}.quote-text em{font-style:italic;color:var(--accent)}
 
 /* CTA */
-.about-cta{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule)}.cta-left{padding:4rem 3rem;border-right:1px solid var(--rule);display:flex;flex-direction:column;justify-content:center}.cta-right{padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center}.cta-label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:1.5rem;font-weight:500}.cta-heading{font-family:'DM Serif Display',Georgia,serif;font-size:1.8rem;font-weight:400;line-height:1.2;margin-bottom:0}.cta-body{font-size:1rem;line-height:1.8;color:var(--body-text);margin-bottom:2rem}.cta-link{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1.5px solid var(--black);padding-bottom:4px;transition:color .2s,border-color .2s;font-weight:500;align-self:flex-start}.cta-link:hover{color:var(--accent);border-color:var(--accent)}
+.about-cta{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule)}.cta-left{padding:4rem 3rem;border-right:1px solid var(--rule);display:flex;flex-direction:column;justify-content:center}.cta-right{padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center}.cta-label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:1.5rem;font-weight:500}.cta-heading{font-family:'DM Serif Display',Georgia,serif;font-size:1.8rem;font-weight:400;line-height:1.2}.cta-body{font-size:1rem;line-height:1.8;color:var(--body-text);margin-bottom:2rem}.cta-link{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1.5px solid var(--black);padding-bottom:4px;transition:color .2s,border-color .2s;font-weight:500;align-self:flex-start}.cta-link:hover{color:var(--accent);border-color:var(--accent)}
 
 footer{display:grid;grid-template-columns:1fr 1fr;padding:2.5rem 3rem;align-items:center;border-top:1px solid var(--rule)}.footer-copy{font-size:11px;color:var(--mid);letter-spacing:.08em}.footer-links{display:flex;justify-content:flex-end;gap:2rem}.footer-links a{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;font-weight:500}.footer-links a:hover{color:var(--black)}
 
 .fade{opacity:0;transform:translateY(12px);animation:rise .8s ease forwards}.fade:nth-child(1){animation-delay:.05s}.fade:nth-child(2){animation-delay:.2s}.fade:nth-child(3){animation-delay:.35s}@keyframes rise{to{opacity:1;transform:translateY(0)}}
 
-@media(max-width:768px){nav{padding:0 1.5rem}.nav-links{gap:1.2rem}.page-header{grid-template-columns:1fr}.page-header-left{padding:4rem 1.5rem 2rem;border-right:none;border-bottom:1px solid var(--rule)}.page-header-right{padding:2rem 1.5rem}.bio-section{grid-template-columns:1fr}.bio-left{padding:3rem 1.5rem;border-right:none;border-bottom:1px solid var(--rule)}.bio-right{padding:3rem 1.5rem}.capabilities{padding:3rem 1.5rem}.cap-inner{grid-template-columns:1fr}.about-cta{grid-template-columns:1fr}.cta-left{padding:3rem 1.5rem;border-right:none;border-bottom:1px solid var(--rule)}.cta-right{padding:3rem 1.5rem}.quote-band{padding:3rem 1.5rem}footer{grid-template-columns:1fr;gap:1rem;padding:2rem 1.5rem}.footer-links{justify-content:flex-start}}</style>
+@media(max-width:768px){nav{padding:0 1.5rem}.nav-links{gap:1.2rem}.intro{grid-template-columns:1fr;min-height:auto}.intro-photo{height:60vw;border-right:none;border-bottom:1px solid var(--rule)}.intro-text{padding:3rem 1.5rem}.bio-section{grid-template-columns:1fr}.bio-left{padding:3rem 1.5rem;border-right:none;border-bottom:1px solid var(--rule)}.bio-right{padding:3rem 1.5rem}.capabilities{padding:3rem 1.5rem}.quote-band{padding:3rem 1.5rem}.about-cta{grid-template-columns:1fr}.cta-left{padding:3rem 1.5rem;border-right:none;border-bottom:1px solid var(--rule)}.cta-right{padding:3rem 1.5rem}footer{grid-template-columns:1fr;gap:1rem;padding:2rem 1.5rem}.footer-links{justify-content:flex-start}}</style>
 </head>
 <body>
 
@@ -40,16 +40,19 @@ footer{display:grid;grid-template-columns:1fr 1fr;padding:2.5rem 3rem;align-item
   </ul>
 </nav>
 
-<div class="page-header">
-  <div class="page-header-left">
-    <p class="page-eyebrow fade">About</p>
-    <h1 class="page-title fade">The work<br>behind<br>the work.</h1>
+<!-- INTRO WITH PHOTO -->
+<div class="intro">
+  <div class="intro-photo">
+    <img src="masha.png" alt="Masha Rastatourova">
   </div>
-  <div class="page-header-right">
-    <p class="page-intro fade">A decade at the intersection of communication, operations, and execution &mdash; in the places where clarity matters most and is hardest to find.</p>
+  <div class="intro-text">
+    <p class="intro-eyebrow fade">About</p>
+    <h1 class="intro-title fade">The work<br>behind<br><em>the work.</em></h1>
+    <p class="intro-body fade">A decade at the intersection of communication, operations, and execution &mdash; in the places where clarity matters most and is hardest to find.</p>
   </div>
 </div>
 
+<!-- BIO -->
 <div class="bio-section">
   <div class="bio-left">
     <p class="bio-label">Background</p>
@@ -63,44 +66,43 @@ footer{display:grid;grid-template-columns:1fr 1fr;padding:2.5rem 3rem;align-item
   </div>
 </div>
 
+<!-- CAPABILITIES -->
 <div class="capabilities">
-  <div class="cap-inner">
-    <p class="cap-label">What This Has Looked Like</p>
-    <ul class="cap-list">
-      <li class="cap-item">
-        <span class="cap-num">01</span>
-        <div><p class="cap-text">Co-leading a multidisciplinary consultancy</p><p class="cap-sub">Scaling Mammal &mdash; creative strategy, operations, client delivery</p></div>
-      </li>
-      <li class="cap-item">
-        <span class="cap-num">02</span>
-        <div><p class="cap-text">Supporting startup founders through Techstars</p><p class="cap-sub">Program operations, mentor coordination, founder support</p></div>
-      </li>
-      <li class="cap-item">
-        <span class="cap-num">03</span>
-        <div><p class="cap-text">Managing multi-stakeholder initiatives</p><p class="cap-sub">Cross-functional alignment across teams, clients, and leadership</p></div>
-      </li>
-      <li class="cap-item">
-        <span class="cap-num">04</span>
-        <div><p class="cap-text">Shaping narratives and presentations</p><p class="cap-sub">Pitches, proposals, strategic decks for major brand engagements</p></div>
-      </li>
-      <li class="cap-item">
-        <span class="cap-num">05</span>
-        <div><p class="cap-text">Building operational systems</p><p class="cap-sub">Cadence, process, infrastructure that scales with the team</p></div>
-      </li>
-      <li class="cap-item">
-        <span class="cap-num">06</span>
-        <div><p class="cap-text">Translating abstract goals into executable plans</p><p class="cap-sub">Turning vision into structure, strategy into motion</p></div>
-      </li>
-    </ul>
-  </div>
+  <p class="cap-label">What This Has Looked Like</p>
+  <ul class="cap-list">
+    <li class="cap-item">
+      <span class="cap-num">01</span>
+      <div><p class="cap-text">Co-leading a multidisciplinary consultancy</p><p class="cap-sub">Scaling Mammal &mdash; creative strategy, operations, client delivery</p></div>
+    </li>
+    <li class="cap-item">
+      <span class="cap-num">02</span>
+      <div><p class="cap-text">Supporting startup founders through Techstars</p><p class="cap-sub">Program operations, mentor coordination, founder support</p></div>
+    </li>
+    <li class="cap-item">
+      <span class="cap-num">03</span>
+      <div><p class="cap-text">Managing multi-stakeholder initiatives</p><p class="cap-sub">Cross-functional alignment across teams, clients, and leadership</p></div>
+    </li>
+    <li class="cap-item">
+      <span class="cap-num">04</span>
+      <div><p class="cap-text">Shaping narratives and presentations</p><p class="cap-sub">Pitches, proposals, strategic decks for major brand engagements</p></div>
+    </li>
+    <li class="cap-item">
+      <span class="cap-num">05</span>
+      <div><p class="cap-text">Building operational systems</p><p class="cap-sub">Cadence, process, infrastructure that scales with the team</p></div>
+    </li>
+    <li class="cap-item">
+      <span class="cap-num">06</span>
+      <div><p class="cap-text">Translating abstract goals into executable plans</p><p class="cap-sub">Turning vision into structure, strategy into motion</p></div>
+    </li>
+  </ul>
 </div>
 
+<!-- QUOTE -->
 <div class="quote-band">
-  <div class="quote-inner">
-    <p class="quote-text">&ldquo;I&rsquo;m drawn to the moment when a complex, tangled situation starts to <em>resolve</em> &mdash; when the right question gets asked, the right frame gets found, and things begin to move.&rdquo;</p>
-  </div>
+  <p class="quote-text">&ldquo;I&rsquo;m drawn to the moment when a complex, tangled situation starts to <em>resolve</em> &mdash; when the right question gets asked, the right frame gets found, and things begin to move.&rdquo;</p>
 </div>
 
+<!-- CTA -->
 <div class="about-cta">
   <div class="cta-left">
     <p class="cta-label">Work Together</p>
