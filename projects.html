@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Masha Rastatourova</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--black:#0a0a09;--warm-white:#f5f4f0;--off-white:#eceae4;--mid:#5a5a56;--rule:#c8c7c2;--accent:#c8442a;--body-text:#2a2a27}html{font-size:16px;scroll-behavior:smooth}body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--warm-white);color:var(--black);font-weight:400;line-height:1.6;letter-spacing:.01em;-webkit-font-smoothing:antialiased}nav{width:100%;background:var(--warm-white);border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px}.nav-name{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);text-decoration:none}.nav-links{display:flex;gap:2.5rem;list-style:none}.nav-links a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s}.nav-links a:hover{color:var(--black)}.nav-links a.active{color:var(--black)}
+
+/* PAGE HEADER */
+.page-header{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule);min-height:38vh}.page-header-left{padding:5rem 3rem;border-right:1px solid var(--rule);display:flex;flex-direction:column;justify-content:flex-end}.page-header-right{padding:5rem 3rem;display:flex;flex-direction:column;justify-content:flex-end}.page-eyebrow{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:2rem;font-weight:500}.page-title{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(2.8rem,4vw,4rem);font-weight:400;line-height:1.08;letter-spacing:-.02em}.page-intro{font-size:1.1rem;line-height:1.85;color:var(--body-text);max-width:460px}
+
+/* PROJECT BLOCK */
+.project{border-bottom:1px solid var(--rule)}.project-header{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule);padding:3rem;align-items:end;cursor:pointer;transition:background .2s}.project-header:hover{background:var(--off-white)}.project-meta{display:flex;flex-direction:column;gap:.8rem}.project-tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:500}.project-title{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:400;line-height:1.15;letter-spacing:-.01em}.project-client{font-size:.85rem;color:var(--mid)}.project-toggle{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);display:flex;align-items:center;gap:.5rem;justify-content:flex-end;align-self:flex-end;font-weight:500}.project-toggle .arrow{transition:transform .3s;display:inline-block}.project-body{display:none;grid-template-columns:1fr 1fr}.project-body.open{display:grid}.project-col{padding:4rem 3rem;border-right:1px solid var(--rule)}.project-col:last-child{border-right:none}.col-label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:2rem;font-weight:500}.col-body{font-size:.97rem;line-height:1.85;color:var(--body-text);margin-bottom:1.2rem}.col-body:last-child{margin-bottom:0}.col-list{list-style:none;margin-top:1rem}.col-list li{font-size:.92rem;color:var(--body-text);padding:.5rem 0;border-top:1px solid var(--rule);display:flex;gap:1rem;align-items:baseline;line-height:1.5}.col-list li:last-child{border-bottom:1px solid var(--rule)}.col-list li::before{content:"—";color:var(--mid);flex-shrink:0;font-size:.8rem}
+
+/* OUTCOME BAND */
+.outcome-band{background:var(--off-white);padding:3rem;border-top:1px solid var(--rule);grid-column:1/-1;display:none}.outcome-band.open{display:block}.outcome-label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:1.5rem;font-weight:500}.outcome-text{font-family:'DM Serif Display',Georgia,serif;font-size:1.3rem;font-weight:400;line-height:1.4;color:var(--black);max-width:700px}.outcome-text em{font-style:italic;color:var(--accent)}
+
+/* CTA */
+.page-cta{display:grid;grid-template-columns:1fr 1fr}.cta-left{padding:4rem 3rem;border-right:1px solid var(--rule);display:flex;flex-direction:column;justify-content:center}.cta-right{padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center}.cta-label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:1.5rem;font-weight:500}.cta-heading{font-family:'DM Serif Display',Georgia,serif;font-size:1.8rem;font-weight:400;line-height:1.2}.cta-body{font-size:1rem;line-height:1.8;color:var(--body-text);margin-bottom:2rem}.cta-link{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1.5px solid var(--black);padding-bottom:4px;transition:color .2s,border-color .2s;font-weight:500;align-self:flex-start}.cta-link:hover{color:var(--accent);border-color:var(--accent)}
+
+footer{display:grid;grid-template-columns:1fr 1fr;padding:2.5rem 3rem;align-items:center;border-top:1px solid var(--rule)}.footer-copy{font-size:11px;color:var(--mid);letter-spacing:.08em}.footer-links{display:flex;justify-content:flex-end;gap:2rem}.footer-links a{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;font-weight:500}.footer-links a:hover{color:var(--black)}
+
+.fade{opacity:0;transform:translateY(12px);animation:rise .8s ease forwards}.fade:nth-child(1){animation-delay:.05s}.fade:nth-child(2){animation-delay:.2s}@keyframes rise{to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:768px){nav{padding:0 1.5rem}.nav-links{gap:1.2rem}.page-header{grid-template-columns:1fr}.page-header-left{padding:4rem 1.5rem 2rem;border-right:none;border-bottom:1px solid var(--rule)}.page-header-right{padding:2rem 1.5rem}.project-header{grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem}.project-toggle{justify-content:flex-start}.project-body.open{grid-template-columns:1fr}.project-col{padding:2.5rem 1.5rem;border-right:none;border-bottom:1px solid var(--rule)}.project-col:last-child{border-bottom:none}.outcome-band{padding:2rem 1.5rem}.page-cta{grid-template-columns:1fr}.cta-left{padding:3rem 1.5rem;border-right:none;border-bottom:1px solid var(--rule)}.cta-right{padding:3rem 1.5rem}footer{grid-template-columns:1fr;gap:1rem;padding:2rem 1.5rem}.footer-links{justify-content:flex-start}}</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="index.html">Masha Rastatourova</a>
+  <ul class="nav-links">
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="musings.html">Musings</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-left">
+    <p class="page-eyebrow fade">Projects</p>
+    <h1 class="page-title fade">Selected<br>work.</h1>
+  </div>
+  <div class="page-header-right">
+    <p class="page-intro fade">A cross-section of engagements across agencies, accelerators, and enterprise brands. Each one shaped by the same core interest: helping complex work move forward with clarity.</p>
+  </div>
+</div>
+
+<!-- PROJECT 1: WARNER MEDIA -->
+<div class="project">
+  <div class="project-header" onclick="toggleProject('warnermedia')">
+    <div class="project-meta">
+      <span class="project-tag">Entertainment &nbsp;·&nbsp; Campaign Operations</span>
+      <h2 class="project-title">Warner Media &amp;<br>Entertainment Campaigns</h2>
+      <p class="project-client">WarnerMedia, Freeform, and entertainment brand partners</p>
+    </div>
+    <div class="project-toggle">Read more <span class="arrow" id="arrow-warnermedia">&darr;</span></div>
+  </div>
+  <div class="project-body" id="project-warnermedia">
+    <div class="project-col">
+      <p class="col-label">The Challenge</p>
+      <p class="col-body">Entertainment marketing environments move quickly and rarely follow a perfectly linear process. Teams needed to stay aligned across creative development, production, approvals, and delivery while responding to shifting priorities in real time.</p>
+      <p class="col-body">Success depended not only on strong creative thinking, but on communication, organization, and operational follow-through.</p>
+    </div>
+    <div class="project-col">
+      <p class="col-label">My Role</p>
+      <p class="col-body">I supported the operational and strategic coordination behind a variety of campaigns and creative initiatives, helping align teams, timelines, and client expectations throughout.</p>
+      <ul class="col-list">
+        <li>Cross-functional coordination across creative and production teams</li>
+        <li>Workflow and delivery management</li>
+        <li>Presentation and pitch support</li>
+        <li>Stakeholder communication</li>
+        <li>Resourcing and operational planning</li>
+        <li>Navigating evolving project needs in real time</li>
+      </ul>
+    </div>
+  </div>
+  <div class="outcome-band" id="outcome-warnermedia">
+    <p class="outcome-label">The Outcome</p>
+    <p class="outcome-text">The work contributed to <em>long-standing client relationships</em> and repeat partnerships across a demanding and highly visible entertainment landscape &mdash; reinforcing the value of clear operations inside creative environments.</p>
+  </div>
+</div>
+
+<!-- PROJECT 2: TECHSTARS -->
+<div class="project">
+  <div class="project-header" onclick="toggleProject('techstars')">
+    <div class="project-meta">
+      <span class="project-tag">Accelerator &nbsp;·&nbsp; Program Operations</span>
+      <h2 class="project-title">Techstars Atlanta<br>Accelerator Program</h2>
+      <p class="project-client">Techstars Atlanta &mdash; 10-company cohort</p>
+    </div>
+    <div class="project-toggle">Read more <span class="arrow" id="arrow-techstars">&darr;</span></div>
+  </div>
+  <div class="project-body" id="project-techstars">
+    <div class="project-col">
+      <p class="col-label">The Challenge</p>
+      <p class="col-body">Running an accelerator program means managing a dense, fast-moving environment with many stakeholders: founders at different stages, mentors with varied availability, investors, staff, and program partners — all moving simultaneously.</p>
+      <p class="col-body">The operational infrastructure needed to hold all of it together without creating unnecessary friction for the founders it was designed to serve.</p>
+    </div>
+    <div class="project-col">
+      <p class="col-label">My Role</p>
+      <p class="col-body">I supported program operations across the full arc of the cohort, helping translate the program's ambitions into day-to-day execution.</p>
+      <ul class="col-list">
+        <li>End-to-end program logistics and scheduling</li>
+        <li>Mentor coordination and relationship management</li>
+        <li>Founder support across the cohort</li>
+        <li>Stakeholder communication and updates</li>
+        <li>Event and demo day preparation</li>
+        <li>Internal systems and process design</li>
+      </ul>
+    </div>
+  </div>
+  <div class="outcome-band" id="outcome-techstars">
+    <p class="outcome-label">The Outcome</p>
+    <p class="outcome-text">A well-run program that allowed founders to focus on <em>building</em> rather than navigating logistics &mdash; and confirmed that operational clarity is just as valuable inside startup ecosystems as anywhere else.</p>
+  </div>
+</div>
+
+<!-- PROJECT 3: STARBUCKS PITCH -->
+<div class="project">
+  <div class="project-header" onclick="toggleProject('starbucks')">
+    <div class="project-meta">
+      <span class="project-tag">Pitch &nbsp;·&nbsp; Creative Strategy</span>
+      <h2 class="project-title">Starbucks Pitch &amp;<br>Talent Strategy</h2>
+      <p class="project-client">Starbucks &mdash; creative and talent initiative</p>
+    </div>
+    <div class="project-toggle">Read more <span class="arrow" id="arrow-starbucks">&darr;</span></div>
+  </div>
+  <div class="project-body" id="project-starbucks">
+    <div class="project-col">
+      <p class="col-label">The Context</p>
+      <p class="col-body">Pitches are compressed, high-pressure environments that require strategic thinking, coordination, and rapid decision-making across multiple moving parts simultaneously.</p>
+      <p class="col-body">This engagement involved supporting a pitch process connected to Starbucks and a broader talent and creative strategy initiative — a high-visibility opportunity with tight timelines and multiple contributors.</p>
+    </div>
+    <div class="project-col">
+      <p class="col-label">My Role</p>
+      <p class="col-body">I supported the operational and strategic side of the pitch process, connecting high-level creative thinking with the practical realities required to move the work forward.</p>
+      <ul class="col-list">
+        <li>Talent coordination across contributors</li>
+        <li>Presentation development and narrative structure</li>
+        <li>Workflow management under compressed timelines</li>
+        <li>Communication alignment across teams</li>
+        <li>Internal organization and resourcing</li>
+      </ul>
+    </div>
+  </div>
+  <div class="outcome-band" id="outcome-starbucks">
+    <p class="outcome-label">The Outcome</p>
+    <p class="outcome-text">A pitch that came together under pressure &mdash; and a clear demonstration that <em>operational clarity and creative ambition</em> aren&rsquo;t in tension. They reinforce each other.</p>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="page-cta">
+  <div class="cta-left">
+    <p class="cta-label">Work Together</p>
+    <h2 class="cta-heading">Have a project<br>that needs structure?</h2>
+  </div>
+  <div class="cta-right">
+    <p class="cta-body">Whether you&rsquo;re building something new, navigating something complex, or just need someone to help bring clarity to a messy situation &mdash; I&rsquo;d love to hear about it.</p>
+    <a class="cta-link" href="contact.html">Get in touch &nbsp;&rarr;</a>
+  </div>
+</div>
+
+<footer>
+  <p class="footer-copy">&copy; 2026 Omnific Collective LLC</p>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/rastatourova/" target="_blank">LinkedIn</a>
+    <a href="mailto:masha.rastatourova@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script>
+function toggleProject(id) {
+  var body = document.getElementById('project-' + id);
+  var outcome = document.getElementById('outcome-' + id);
+  var arrow = document.getElementById('arrow-' + id);
+  var isOpen = body.classList.contains('open');
+  body.classList.toggle('open');
+  outcome.classList.toggle('open');
+  arrow.innerHTML = isOpen ? '&darr;' : '&uarr;';
+}
+</script>
+
+</body>
+</html>

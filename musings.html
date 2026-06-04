@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Musings — Masha Rastatourova</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--black:#0a0a09;--warm-white:#f5f4f0;--off-white:#eceae4;--mid:#5a5a56;--rule:#c8c7c2;--accent:#c8442a;--body-text:#2a2a27}html{font-size:16px;scroll-behavior:smooth}body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--warm-white);color:var(--black);font-weight:400;line-height:1.6;letter-spacing:.01em;-webkit-font-smoothing:antialiased}nav{width:100%;background:var(--warm-white);border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px}.nav-name{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);text-decoration:none}.nav-links{display:flex;gap:2.5rem;list-style:none}.nav-links a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s}.nav-links a:hover{color:var(--black)}.nav-links a.active{color:var(--black)}
+
+/* PAGE HEADER */
+.page-header{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule);min-height:38vh}.page-header-left{padding:5rem 3rem;border-right:1px solid var(--rule);display:flex;flex-direction:column;justify-content:flex-end}.page-header-right{padding:5rem 3rem;display:flex;flex-direction:column;justify-content:flex-end}.page-eyebrow{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:2rem;font-weight:500}.page-title{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(2.8rem,4vw,4rem);font-weight:400;line-height:1.08;letter-spacing:-.02em}.page-intro{font-size:1.1rem;line-height:1.85;color:var(--body-text);max-width:460px}
+
+/* ARTICLE LIST */
+.articles{border-bottom:1px solid var(--rule)}
+.article-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule);cursor:pointer;transition:background .2s}.article-row:hover{background:var(--off-white)}.article-row:last-child{border-bottom:none}.article-left{padding:3rem;border-right:1px solid var(--rule)}.article-right{padding:3rem;display:flex;flex-direction:column;justify-content:space-between}.article-tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:1rem}.article-title{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(1.4rem,2.2vw,1.9rem);font-weight:400;line-height:1.2;letter-spacing:-.01em;margin-bottom:1rem}.article-date{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);font-weight:500}.article-preview{font-size:.95rem;line-height:1.8;color:var(--body-text);margin-bottom:2rem}.article-read{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--black);border-bottom:1px solid var(--black);padding-bottom:2px;display:inline-block;align-self:flex-start;transition:color .2s,border-color .2s;font-weight:500}.article-row:hover .article-read{color:var(--accent);border-color:var(--accent)}
+
+/* FULL ARTICLE */
+.article-full{display:none;border-bottom:1px solid var(--rule)}.article-full.open{display:block}.article-full-inner{display:grid;grid-template-columns:1fr 2fr;border-bottom:1px solid var(--rule)}.article-sidebar{padding:4rem 3rem;border-right:1px solid var(--rule)}.sidebar-label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:1.5rem;font-weight:500}.sidebar-title{font-family:'DM Serif Display',Georgia,serif;font-size:1.4rem;font-weight:400;line-height:1.25;margin-bottom:2rem}.sidebar-meta{font-size:.85rem;color:var(--mid);line-height:1.7}.article-content{padding:4rem 3rem}.article-content p{font-size:1.05rem;line-height:1.9;color:var(--body-text);margin-bottom:1.6rem}.article-content p:last-child{margin-bottom:0}.article-content p.pullquote{font-family:'DM Serif Display',Georgia,serif;font-size:1.35rem;line-height:1.4;color:var(--black);border-left:2px solid var(--accent);padding-left:1.5rem;margin:2.5rem 0;font-weight:400}
+
+/* CLOSE BTN */
+.close-btn{padding:1.5rem 3rem;display:flex;align-items:center;gap:.5rem;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);cursor:pointer;transition:color .2s;font-weight:500;background:none;border:none;font-family:inherit}.close-btn:hover{color:var(--black)}
+
+footer{display:grid;grid-template-columns:1fr 1fr;padding:2.5rem 3rem;align-items:center;border-top:1px solid var(--rule)}.footer-copy{font-size:11px;color:var(--mid);letter-spacing:.08em}.footer-links{display:flex;justify-content:flex-end;gap:2rem}.footer-links a{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;font-weight:500}.footer-links a:hover{color:var(--black)}
+
+.fade{opacity:0;transform:translateY(12px);animation:rise .8s ease forwards}.fade:nth-child(1){animation-delay:.05s}.fade:nth-child(2){animation-delay:.2s}@keyframes rise{to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:768px){nav{padding:0 1.5rem}.nav-links{gap:1.2rem}.page-header{grid-template-columns:1fr}.page-header-left{padding:4rem 1.5rem 2rem;border-right:none;border-bottom:1px solid var(--rule)}.page-header-right{padding:2rem 1.5rem}.article-row{grid-template-columns:1fr}.article-left{padding:2rem 1.5rem;border-right:none;border-bottom:1px solid var(--rule)}.article-right{padding:2rem 1.5rem}.article-full-inner{grid-template-columns:1fr}.article-sidebar{padding:2.5rem 1.5rem;border-right:none;border-bottom:1px solid var(--rule)}.article-content{padding:2.5rem 1.5rem}.close-btn{padding:1.5rem}footer{grid-template-columns:1fr;gap:1rem;padding:2rem 1.5rem}.footer-links{justify-content:flex-start}}</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="index.html">Masha Rastatourova</a>
+  <ul class="nav-links">
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="musings.html" class="active">Musings</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-left">
+    <p class="page-eyebrow fade">Musings</p>
+    <h1 class="page-title fade">Thinking<br>out loud.</h1>
+  </div>
+  <div class="page-header-right">
+    <p class="page-intro fade">Essays, observations, and short thoughts on leadership, clarity, creative work, and the spaces in between. Written when something feels worth saying.</p>
+  </div>
+</div>
+
+<div class="articles">
+
+  <!-- ARTICLE 1 -->
+  <div class="article-row" onclick="toggleArticle('clarity')">
+    <div class="article-left">
+      <p class="article-tag">Essay &nbsp;·&nbsp; Leadership</p>
+      <h2 class="article-title">Clarity is Leadership</h2>
+      <p class="article-date">2024</p>
+    </div>
+    <div class="article-right">
+      <p class="article-preview">One of the more surprising things about running a creative business is realizing how little of the job is actually about creativity &mdash; at least in the way most people imagine. Many projects succeed or fail long before the deliverables enter the picture.</p>
+      <span class="article-read">Read &nbsp;&rarr;</span>
+    </div>
+  </div>
+  <div class="article-full" id="article-clarity">
+    <div class="article-full-inner">
+      <div class="article-sidebar">
+        <p class="sidebar-label">Essay</p>
+        <h3 class="sidebar-title">Clarity is Leadership</h3>
+        <p class="sidebar-meta">On communication, ambiguity, and why clearness is a competitive advantage &mdash; not just a soft skill.</p>
+      </div>
+      <div class="article-content">
+        <p>One of the more surprising things about running a creative business is realizing how little of the job is actually about creativity &mdash; at least not in the way most people imagine.</p>
+        <p>The work itself matters, of course. Strong thinking matters. Taste matters. Execution matters. But over time, I noticed that many projects succeeded or failed long before the actual deliverables entered the picture.</p>
+        <p>They succeeded or failed in meetings. In unclear expectations. In delayed decisions. In vague feedback. In conversations people thought were &ldquo;good enough&rdquo; but quietly left everyone interpreting the project differently.</p>
+        <p class="pullquote">A surprising amount of business friction is really communication friction.</p>
+        <p>Not dramatic conflict. Not incompetence. Just accumulated ambiguity.</p>
+        <p>In creative and startup environments especially, people often mistake motion for alignment. Teams move quickly, conversations happen constantly, ideas evolve in real time, and everyone assumes shared understanding exists because everyone has been present for the discussion.</p>
+        <p>But proximity is not clarity. And ambiguity compounds.</p>
+        <p>One stakeholder thinks the priority is speed. Another assumes quality. Someone else believes the scope is still flexible. Meanwhile the team continues moving forward &mdash; often confidently &mdash; until the disconnect becomes too large to ignore. By then, what looks like a production problem is usually a communication problem that surfaced too late.</p>
+        <p>Over time, I started thinking about clarity less as a communication skill and more as a leadership responsibility.</p>
+        <p>Clear communication reduces unnecessary drag. It helps people make better decisions. It lowers defensiveness. It creates trust. It allows teams to move faster because fewer people are wasting energy interpreting hidden expectations.</p>
+        <p class="pullquote">The absence of clarity creates something else entirely: hesitation.</p>
+        <p>Teams hesitate when priorities are unclear. Clients hesitate when communication becomes inconsistent. Founders hesitate when messaging changes every week. Eventually momentum slows, even if everyone involved is talented.</p>
+        <p>What surprised me most while running a studio was how often clients returned not simply because of the work, but because the experience of working together felt stable. Stable doesn&rsquo;t mean rigid. It means people understood where things stood. Problems were surfaced early. Expectations stayed visible. Decisions had context. Conversations stayed honest.</p>
+        <p>That kind of steadiness is difficult to measure, but incredibly easy to feel.</p>
+        <p>And increasingly, I think it is one of the most undervalued competitive advantages in business &mdash; particularly now. We are entering an era where execution is becoming more automated, content more abundant, and output easier to generate at scale. As that happens, clarity, judgment, and thoughtful communication become more important, not less.</p>
+        <p>Because when everyone can produce more, the real differentiator becomes whether people understand what matters, why it matters, and where they are actually trying to go.</p>
+        <p>That is ultimately what clarity provides. Not simplification. Direction.</p>
+      </div>
+    </div>
+    <button class="close-btn" onclick="toggleArticle('clarity'); event.stopPropagation();">&uarr; &nbsp; Close</button>
+  </div>
+
+  <!-- ARTICLE 2 — placeholder -->
+  <div class="article-row" onclick="toggleArticle('motion')">
+    <div class="article-left">
+      <p class="article-tag">Note &nbsp;·&nbsp; Operations</p>
+      <h2 class="article-title">Motion Is Not Progress</h2>
+      <p class="article-date">2024</p>
+    </div>
+    <div class="article-right">
+      <p class="article-preview">Busy teams aren&rsquo;t always productive teams. There&rsquo;s a particular kind of organizational exhaustion that comes from confusing activity with output &mdash; and it&rsquo;s more common than most leaders want to admit.</p>
+      <span class="article-read">Read &nbsp;&rarr;</span>
+    </div>
+  </div>
+  <div class="article-full" id="article-motion">
+    <div class="article-full-inner">
+      <div class="article-sidebar">
+        <p class="sidebar-label">Note</p>
+        <h3 class="sidebar-title">Motion Is Not Progress</h3>
+        <p class="sidebar-meta">On the difference between being busy and actually moving forward.</p>
+      </div>
+      <div class="article-content">
+        <p>Busy teams aren&rsquo;t always productive teams. There&rsquo;s a particular kind of organizational exhaustion that comes from confusing activity with output &mdash; and it&rsquo;s more common than most leaders want to admit.</p>
+        <p class="pullquote">The calendar is full. The Slack is noisy. The to-do list never empties. And yet nothing quite moves.</p>
+        <p>This is a placeholder for your next piece. Replace this text with your own writing when you&rsquo;re ready &mdash; the layout and formatting will carry it.</p>
+      </div>
+    </div>
+    <button class="close-btn" onclick="toggleArticle('motion'); event.stopPropagation();">&uarr; &nbsp; Close</button>
+  </div>
+
+  <!-- ARTICLE 3 — placeholder -->
+  <div class="article-row" onclick="toggleArticle('ambiguity')">
+    <div class="article-left">
+      <p class="article-tag">Essay &nbsp;·&nbsp; Strategy</p>
+      <h2 class="article-title">On Sitting With Ambiguity</h2>
+      <p class="article-date">2025</p>
+    </div>
+    <div class="article-right">
+      <p class="article-preview">Most operational frameworks are built to eliminate uncertainty. But the most valuable skill I&rsquo;ve developed isn&rsquo;t removing ambiguity &mdash; it&rsquo;s learning to work clearly inside of it.</p>
+      <span class="article-read">Read &nbsp;&rarr;</span>
+    </div>
+  </div>
+  <div class="article-full" id="article-ambiguity">
+    <div class="article-full-inner">
+      <div class="article-sidebar">
+        <p class="sidebar-label">Essay</p>
+        <h3 class="sidebar-title">On Sitting With Ambiguity</h3>
+        <p class="sidebar-meta">Why the ability to work clearly inside uncertainty is more useful than trying to eliminate it.</p>
+      </div>
+      <div class="article-content">
+        <p>Most operational frameworks are built to eliminate uncertainty. But the most valuable skill I&rsquo;ve developed isn&rsquo;t removing ambiguity &mdash; it&rsquo;s learning to work clearly inside of it.</p>
+        <p class="pullquote">Certainty is a luxury. Clarity is a practice.</p>
+        <p>This is a placeholder for your next piece. Replace this text with your own writing when you&rsquo;re ready.</p>
+      </div>
+    </div>
+    <button class="close-btn" onclick="toggleArticle('ambiguity'); event.stopPropagation();">&uarr; &nbsp; Close</button>
+  </div>
+
+</div>
+
+<footer>
+  <p class="footer-copy">&copy; 2026 Omnific Collective LLC</p>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/rastatourova/" target="_blank">LinkedIn</a>
+    <a href="mailto:masha.rastatourova@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script>
+function toggleArticle(id) {
+  var el = document.getElementById('article-' + id);
+  var isOpen = el.classList.contains('open');
+  document.querySelectorAll('.article-full').forEach(function(a){ a.classList.remove('open'); });
+  if (!isOpen) {
+    el.classList.add('open');
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+}
+</script>
+
+</body>
+</html>
