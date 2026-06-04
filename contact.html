@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Masha Rastatourova</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--black:#0a0a09;--warm-white:#f5f4f0;--off-white:#eceae4;--mid:#5a5a56;--rule:#c8c7c2;--accent:#c8442a;--body-text:#2a2a27}html{font-size:16px;scroll-behavior:smooth}body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--warm-white);color:var(--black);font-weight:400;line-height:1.6;letter-spacing:.01em;-webkit-font-smoothing:antialiased}nav{width:100%;background:var(--warm-white);border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px}.nav-name{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);text-decoration:none}.nav-links{display:flex;gap:2.5rem;list-style:none}.nav-links a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s}.nav-links a:hover{color:var(--black)}.nav-links a.active{color:var(--black)}
+
+/* PAGE HEADER */
+.page-header{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule);min-height:40vh}.page-header-left{padding:5rem 3rem;border-right:1px solid var(--rule);display:flex;flex-direction:column;justify-content:flex-end}.page-header-right{padding:5rem 3rem;display:flex;flex-direction:column;justify-content:flex-end}.page-eyebrow{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:2rem;font-weight:500}.page-title{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(2.8rem,4vw,4rem);font-weight:400;line-height:1.08;letter-spacing:-.02em}.page-intro{font-size:1.15rem;line-height:1.85;color:var(--body-text);max-width:460px}
+
+/* CONTACT GRID */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule)}.contact-left{padding:5rem 3rem;border-right:1px solid var(--rule)}.contact-right{padding:5rem 3rem}.contact-label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:3rem;font-weight:500}
+
+/* DIRECT LINKS */
+.direct-links{display:flex;flex-direction:column;gap:0}.direct-link{display:flex;align-items:center;justify-content:space-between;padding:1.6rem 0;border-top:1px solid var(--rule);text-decoration:none;transition:color .2s}.direct-link:last-child{border-bottom:1px solid var(--rule)}.direct-link-label{font-size:.95rem;font-weight:500;color:var(--black);transition:color .2s}.direct-link-sub{font-size:.82rem;color:var(--mid);margin-top:.2rem}.direct-link-arrow{font-size:1.2rem;color:var(--mid);transition:color .2s,transform .2s}.direct-link:hover .direct-link-label{color:var(--accent)}.direct-link:hover .direct-link-arrow{color:var(--accent);transform:translateX(4px)}
+
+/* FORM */
+.form-group{margin-bottom:2rem}.form-label{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);margin-bottom:.7rem;font-weight:500}.form-input,.form-textarea{width:100%;background:transparent;border:none;border-bottom:1px solid var(--rule);padding:.7rem 0;font-size:1rem;color:var(--black);font-family:inherit;font-weight:400;outline:none;transition:border-color .2s;-webkit-appearance:none;border-radius:0}.form-input:focus,.form-textarea:focus{border-bottom-color:var(--black)}.form-textarea{resize:none;height:120px;line-height:1.7}.form-submit{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--warm-white);background:var(--black);border:none;padding:14px 28px;cursor:pointer;font-family:inherit;font-weight:500;transition:background .2s;margin-top:1rem}.form-submit:hover{background:var(--accent)}.form-note{font-size:.8rem;color:var(--mid);margin-top:1rem;line-height:1.6}
+
+/* AVAILABILITY */
+.availability{padding:3rem;border-bottom:1px solid var(--rule);background:var(--off-white);display:flex;align-items:center;gap:1.5rem}.avail-dot{width:8px;height:8px;border-radius:50%;background:#4a9c6b;flex-shrink:0}.avail-text{font-size:.9rem;color:var(--body-text)}.avail-text strong{color:var(--black);font-weight:500}
+
+footer{display:grid;grid-template-columns:1fr 1fr;padding:2.5rem 3rem;align-items:center;border-top:1px solid var(--rule)}.footer-copy{font-size:11px;color:var(--mid);letter-spacing:.08em}.footer-links{display:flex;justify-content:flex-end;gap:2rem}.footer-links a{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;font-weight:500}.footer-links a:hover{color:var(--black)}
+
+.fade{opacity:0;transform:translateY(12px);animation:rise .8s ease forwards}.fade:nth-child(1){animation-delay:.05s}.fade:nth-child(2){animation-delay:.2s}.fade:nth-child(3){animation-delay:.35s}@keyframes rise{to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:768px){nav{padding:0 1.5rem}.nav-links{gap:1.2rem}.page-header{grid-template-columns:1fr}.page-header-left{padding:4rem 1.5rem 2rem;border-right:none;border-bottom:1px solid var(--rule)}.page-header-right{padding:2rem 1.5rem}.contact-grid{grid-template-columns:1fr}.contact-left{padding:3rem 1.5rem;border-right:none;border-bottom:1px solid var(--rule)}.contact-right{padding:3rem 1.5rem}.availability{padding:2rem 1.5rem}footer{grid-template-columns:1fr;gap:1rem;padding:2rem 1.5rem}.footer-links{justify-content:flex-start}}</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="index.html">Masha Rastatourova</a>
+  <ul class="nav-links">
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="musings.html">Musings</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-left">
+    <p class="page-eyebrow fade">Contact</p>
+    <h1 class="page-title fade">Let&rsquo;s talk<br>about what<br>you&rsquo;re building.</h1>
+  </div>
+  <div class="page-header-right">
+    <p class="page-intro fade">Whether you have a specific project in mind or just want to think something through &mdash; I&rsquo;m always open to a good conversation.</p>
+  </div>
+</div>
+
+<div class="availability">
+  <div class="avail-dot"></div>
+  <p class="avail-text"><strong>Currently available</strong> for strategic operations, founder support, and select consulting engagements.</p>
+</div>
+
+<div class="contact-grid">
+  <div class="contact-left">
+    <p class="contact-label">Reach Out Directly</p>
+    <div class="direct-links">
+      <a class="direct-link" href="mailto:masha.rastatourova@gmail.com">
+        <div>
+          <p class="direct-link-label">Email</p>
+          <p class="direct-link-sub">masha.rastatourova@gmail.com</p>
+        </div>
+        <span class="direct-link-arrow">&rarr;</span>
+      </a>
+      <a class="direct-link" href="https://www.linkedin.com/in/rastatourova/" target="_blank">
+        <div>
+          <p class="direct-link-label">LinkedIn</p>
+          <p class="direct-link-sub">linkedin.com/in/rastatourova</p>
+        </div>
+        <span class="direct-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="contact-right">
+    <p class="contact-label">Send a Message</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-group">
+        <label class="form-label" for="name">Your Name</label>
+        <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Email Address</label>
+        <input class="form-input" type="email" id="email" name="email" placeholder="jane@company.com" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="message">What are you working on?</label>
+        <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project, challenge, or idea&hellip;" required></textarea>
+      </div>
+      <button class="form-submit" type="submit">Send message &nbsp;&rarr;</button>
+      <p class="form-note">I typically respond within 1&ndash;2 business days.</p>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p class="footer-copy">&copy; 2026 Omnific Collective LLC</p>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/rastatourova/" target="_blank">LinkedIn</a>
+    <a href="mailto:masha.rastatourova@gmail.com">Email</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Masha Rastatourova</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--black:#0a0a09;--warm-white:#f5f4f0;--off-white:#eceae4;--mid:#5a5a56;--rule:#c8c7c2;--accent:#c8442a;--body-text:#2a2a27}html{font-size:16px;scroll-behavior:smooth}body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--warm-white);color:var(--black);font-weight:400;line-height:1.6;letter-spacing:.01em;-webkit-font-smoothing:antialiased}nav{width:100%;background:var(--warm-white);border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px}.nav-name{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);text-decoration:none}.nav-links{display:flex;gap:2.5rem;list-style:none}.nav-links a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s}.nav-links a:hover{color:var(--black)}.nav-links a.active{color:var(--black)}
+
+/* PAGE HEADER */
+.page-header{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule);min-height:40vh}.page-header-left{padding:5rem 3rem;border-right:1px solid var(--rule);display:flex;flex-direction:column;justify-content:flex-end}.page-header-right{padding:5rem 3rem;display:flex;flex-direction:column;justify-content:flex-end}.page-eyebrow{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:2rem;font-weight:500}.page-title{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(2.8rem,4vw,4rem);font-weight:400;line-height:1.08;letter-spacing:-.02em}.page-intro{font-size:1.15rem;line-height:1.85;color:var(--body-text);max-width:460px}
+
+/* BIO SECTION */
+.bio-section{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule)}.bio-left{padding:5rem 3rem;border-right:1px solid var(--rule)}.bio-right{padding:5rem 3rem}.bio-label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:3rem;font-weight:500}.bio-body{font-size:1rem;line-height:1.85;color:var(--body-text);margin-bottom:1.5rem}.bio-body:last-child{margin-bottom:0}
+
+/* CAPABILITIES */
+.capabilities{border-bottom:1px solid var(--rule);padding:5rem 3rem}.cap-inner{display:grid;grid-template-columns:1fr 1fr;gap:0}.cap-label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:3rem;font-weight:500;grid-column:1/-1}.cap-list{list-style:none}.cap-item{padding:1.4rem 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:start}.cap-item:last-child{border-bottom:1px solid var(--rule)}.cap-num{font-size:10px;color:var(--mid);letter-spacing:.1em;font-weight:500;padding-top:2px}.cap-text{font-size:1rem;color:var(--black);font-weight:400;line-height:1.5}.cap-sub{font-size:.85rem;color:var(--mid);margin-top:.25rem;line-height:1.5}
+
+/* QUOTE BAND */
+.quote-band{padding:5rem 3rem;border-bottom:1px solid var(--rule);background:var(--off-white)}.quote-inner{max-width:780px}.quote-text{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:400;line-height:1.25;letter-spacing:-.01em;color:var(--black)}.quote-text em{font-style:italic;color:var(--accent)}
+
+/* CTA */
+.about-cta{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule)}.cta-left{padding:4rem 3rem;border-right:1px solid var(--rule);display:flex;flex-direction:column;justify-content:center}.cta-right{padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center}.cta-label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin-bottom:1.5rem;font-weight:500}.cta-heading{font-family:'DM Serif Display',Georgia,serif;font-size:1.8rem;font-weight:400;line-height:1.2;margin-bottom:0}.cta-body{font-size:1rem;line-height:1.8;color:var(--body-text);margin-bottom:2rem}.cta-link{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1.5px solid var(--black);padding-bottom:4px;transition:color .2s,border-color .2s;font-weight:500;align-self:flex-start}.cta-link:hover{color:var(--accent);border-color:var(--accent)}
+
+footer{display:grid;grid-template-columns:1fr 1fr;padding:2.5rem 3rem;align-items:center;border-top:1px solid var(--rule)}.footer-copy{font-size:11px;color:var(--mid);letter-spacing:.08em}.footer-links{display:flex;justify-content:flex-end;gap:2rem}.footer-links a{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;font-weight:500}.footer-links a:hover{color:var(--black)}
+
+.fade{opacity:0;transform:translateY(12px);animation:rise .8s ease forwards}.fade:nth-child(1){animation-delay:.05s}.fade:nth-child(2){animation-delay:.2s}.fade:nth-child(3){animation-delay:.35s}@keyframes rise{to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:768px){nav{padding:0 1.5rem}.nav-links{gap:1.2rem}.page-header{grid-template-columns:1fr}.page-header-left{padding:4rem 1.5rem 2rem;border-right:none;border-bottom:1px solid var(--rule)}.page-header-right{padding:2rem 1.5rem}.bio-section{grid-template-columns:1fr}.bio-left{padding:3rem 1.5rem;border-right:none;border-bottom:1px solid var(--rule)}.bio-right{padding:3rem 1.5rem}.capabilities{padding:3rem 1.5rem}.cap-inner{grid-template-columns:1fr}.about-cta{grid-template-columns:1fr}.cta-left{padding:3rem 1.5rem;border-right:none;border-bottom:1px solid var(--rule)}.cta-right{padding:3rem 1.5rem}.quote-band{padding:3rem 1.5rem}footer{grid-template-columns:1fr;gap:1rem;padding:2rem 1.5rem}.footer-links{justify-content:flex-start}}</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="index.html">Masha Rastatourova</a>
+  <ul class="nav-links">
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="musings.html">Musings</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-left">
+    <p class="page-eyebrow fade">About</p>
+    <h1 class="page-title fade">The work<br>behind<br>the work.</h1>
+  </div>
+  <div class="page-header-right">
+    <p class="page-intro fade">A decade at the intersection of communication, operations, and execution &mdash; in the places where clarity matters most and is hardest to find.</p>
+  </div>
+</div>
+
+<div class="bio-section">
+  <div class="bio-left">
+    <p class="bio-label">Background</p>
+    <p class="bio-body">My background spans creative leadership, founder support, operational strategy, and cross-functional coordination &mdash; often in environments where ambiguity, competing priorities, and fast-moving decisions were the norm.</p>
+    <p class="bio-body">Over the past decade, I&rsquo;ve worked across startups, agencies, and enterprise-facing teams, consistently drawn to the work underneath the work: clarifying ideas, structuring communication, aligning stakeholders, and helping teams move from complexity toward coherence.</p>
+  </div>
+  <div class="bio-right">
+    <p class="bio-label">What Drives Me</p>
+    <p class="bio-body">I tend to work best in environments that require synthesis, adaptability, strategic thinking, and calm execution. I&rsquo;m most useful when the picture is still forming &mdash; when someone needs a thought partner, a system builder, or a steady hand to move things forward.</p>
+    <p class="bio-body">The through-line across everything I&rsquo;ve done is simple: I help people and organizations get out of their own way, and into their best work.</p>
+  </div>
+</div>
+
+<div class="capabilities">
+  <div class="cap-inner">
+    <p class="cap-label">What This Has Looked Like</p>
+    <ul class="cap-list">
+      <li class="cap-item">
+        <span class="cap-num">01</span>
+        <div><p class="cap-text">Co-leading a multidisciplinary consultancy</p><p class="cap-sub">Scaling Mammal &mdash; creative strategy, operations, client delivery</p></div>
+      </li>
+      <li class="cap-item">
+        <span class="cap-num">02</span>
+        <div><p class="cap-text">Supporting startup founders through Techstars</p><p class="cap-sub">Program operations, mentor coordination, founder support</p></div>
+      </li>
+      <li class="cap-item">
+        <span class="cap-num">03</span>
+        <div><p class="cap-text">Managing multi-stakeholder initiatives</p><p class="cap-sub">Cross-functional alignment across teams, clients, and leadership</p></div>
+      </li>
+      <li class="cap-item">
+        <span class="cap-num">04</span>
+        <div><p class="cap-text">Shaping narratives and presentations</p><p class="cap-sub">Pitches, proposals, strategic decks for major brand engagements</p></div>
+      </li>
+      <li class="cap-item">
+        <span class="cap-num">05</span>
+        <div><p class="cap-text">Building operational systems</p><p class="cap-sub">Cadence, process, infrastructure that scales with the team</p></div>
+      </li>
+      <li class="cap-item">
+        <span class="cap-num">06</span>
+        <div><p class="cap-text">Translating abstract goals into executable plans</p><p class="cap-sub">Turning vision into structure, strategy into motion</p></div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="quote-band">
+  <div class="quote-inner">
+    <p class="quote-text">&ldquo;I&rsquo;m drawn to the moment when a complex, tangled situation starts to <em>resolve</em> &mdash; when the right question gets asked, the right frame gets found, and things begin to move.&rdquo;</p>
+  </div>
+</div>
+
+<div class="about-cta">
+  <div class="cta-left">
+    <p class="cta-label">Work Together</p>
+    <h2 class="cta-heading">Have something<br>that needs clarity?</h2>
+  </div>
+  <div class="cta-right">
+    <p class="cta-body">Whether you&rsquo;re a founder figuring out what&rsquo;s next, a team that&rsquo;s grown faster than its systems, or a leader who needs a thought partner &mdash; I&rsquo;d love to hear what you&rsquo;re working on.</p>
+    <a class="cta-link" href="contact.html">Get in touch &nbsp;&rarr;</a>
+  </div>
+</div>
+
+<footer>
+  <p class="footer-copy">&copy; 2026 Omnific Collective LLC</p>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/rastatourova/" target="_blank">LinkedIn</a>
+    <a href="mailto:masha.rastatourova@gmail.com">Email</a>
+  </div>
+</footer>
+
+</body>
+</html>
